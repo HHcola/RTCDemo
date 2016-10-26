@@ -207,8 +207,8 @@ public class ChatActivity extends BaseActivity implements AGEventHandler, IHeads
         mGPUVideoView.getGPUImage().setUpCamera(mCameraLoader.getCamera(), mCameraLoader.getDisplayRotate(),
                 mCameraLoader.isUseFrontFace(), false);
 
-        updateFilter();
-        updateFaceDetector();
+        doUpdateFilter();
+        doUpdateFaceDetector();
     }
 
     private void deinitVDM() {
@@ -230,12 +230,9 @@ public class ChatActivity extends BaseActivity implements AGEventHandler, IHeads
         mCurrentFilter = null;
     }
 
-    private void updateFilter() {
+    private void doUpdateFilter() {
         HardCodeData.EffectItem item = HardCodeData.sItems[mCurrentIndex];
         GPUImageFilterGroupBase filterGroup = parseEffect(item.type, DemoConstants.APPDIR + "/" + item.unzipPath);
-//        GPUImageFilterGroupBase filterGroup = new GPUImageFilterGroup();
-//        filterGroup.addFilter(new GPUImageFilter());
-//        filterGroup.addFilter(new GPUImageDrawFace());
 
         filterGroup.setGroupStateChangedListener(this);
         if (null != mGPUVideoView) {
@@ -253,7 +250,7 @@ public class ChatActivity extends BaseActivity implements AGEventHandler, IHeads
         }
     }
 
-    private void updateFaceDetector() {
+    private void doUpdateFaceDetector() {
         if (mGPUVideoView == null) {
             return;
         }
@@ -624,7 +621,7 @@ public class ChatActivity extends BaseActivity implements AGEventHandler, IHeads
         }
 
         mCurrentIndex = (mCurrentIndex + 1) % HardCodeData.sItems.length;
-        updateFilter();
+        doUpdateFilter();
     }
 
     public void onVoiceChatClicked(View view) {
