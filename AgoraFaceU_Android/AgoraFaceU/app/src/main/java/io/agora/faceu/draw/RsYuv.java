@@ -1,0 +1,60 @@
+package io.agora.faceu.draw;
+
+import android.support.v8.renderscript.Allocation;
+import android.support.v8.renderscript.Element;
+import android.support.v8.renderscript.RenderScript;
+import android.support.v8.renderscript.ScriptIntrinsicYuvToRGB;
+import android.support.v8.renderscript.Type;
+
+public class RsYuv {
+    private int mHeight = 0;
+    private int mWidth = 0;
+
+    private RenderScript mRS;
+    private Allocation mAllocationOut;
+    private Allocation mAllocationIn;
+    private ScriptIntrinsicYuvToRGB mYuv;
+
+    public RsYuv(RenderScript rs) {
+        mRS = rs;
+        mYuv = ScriptIntrinsicYuvToRGB.create(rs, Element.RGBA_8888(mRS));
+    }
+
+    public void reset(int width, int height) {
+        if (mAllocationOut != null) {
+            mAllocationOut.destroy();
+        }
+
+        mHeight = height;
+        mWidth = width;
+
+        Type.Builder tb = new Type.Builder(mRS, Element.RGBA_8888(mRS));
+        tb.setX(mWidth);
+        tb.setY(mHeight);
+        Type t = tb.create();
+        mAllocationOut = Allocation.createTyped(mRS, t, Allocation.USAGE_SHARED);
+
+        tb = new Type.Builder(mRS, Element.createPixel(mRS, Element.DataType.UNSIGNED_8, Element.DataKind.PIXEL_YUV));
+        tb.setX(mWidth);
+        tb.setY(mHeight);
+        tb.setYuvFormat(android.graphics.ImageFormat.NV21);
+        mAllocationIn = Allocation.createTyped(mRS, tb.create(), Allocation.USAGE_SHARED);
+        mYuv.setInput(mAllocationIn);
+    }
+
+    public int getWidth() {
+        return mWidth;
+    }
+
+    public int getHeight() {
+        return mHeight;
+    }
+
+    public void execute(byte[] yuv, byte[] out) {
+        mAllocationIn.copyFrom(yuv);
+        mYuv.setInput(mAllocationIn);
+        mYuv.forEach(mAllocationOut);
+
+        mAllocationOut.copyTo(out);
+    }
+}
