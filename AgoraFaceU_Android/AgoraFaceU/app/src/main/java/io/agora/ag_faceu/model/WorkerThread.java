@@ -226,7 +226,7 @@ public class WorkerThread extends Thread {
     }
 
     public void deliverVideoFrame(byte[] data, int width, int height, int rotation, long timestamp) {
-        mVideoSource.DeliverFrame(data, width, height, 0, 0, 0, 0, rotation, timestamp, 4); // format: 1: I420 2: ARGB 3: NV21 4: RGBA
+        mVideoSource.DeliverFrame(data, width, height, 0, 0, 0, 0, rotation, System.currentTimeMillis(), 4); // format: 1: I420 2: ARGB 3: NV21 4: RGBA
     }
 
     private RtcEngine ensureRtcEngineReadyLock() {
