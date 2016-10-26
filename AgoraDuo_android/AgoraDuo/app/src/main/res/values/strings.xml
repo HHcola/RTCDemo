@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AgoraDuo</string>
+    <string name="input_user_name">请输入你的手机号码</string>
+    <string name="login">登录</string>
+    <string name="empty_tip">输入不能为空</string>
+    <string name="self_tip">不能打给自己</string>
+    <string name="call_out_left_time_tip">请在%s秒后重试</string>
+    <string name="call_to">您的电话号码是：%s</string>
+    <string name="call_to_edit">请输入要拨打的电话号码</string>
+    <string name="network_error">网络无法连接，请检查网络</string>
+    <string name="error_101">无效的APP ID</string>
+    <string name="error_confirm">确定</string>
+    <string name="own_num">您的电话号码是：%s</string>
+    <string name="calling_tip">正在打电话给 %s</string>
+    <string name="exit_tip">在按一次退出</string>
+    <string name="accept_call_tip">接收到电话 %s</string>
+</resources>

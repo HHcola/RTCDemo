@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/ic_room_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_marginTop="150dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:inputType="number"
+        android:gravity="center_horizontal"
+        android:background="@drawable/editbox_background_normal"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:hint="@string/input_user_name"
+        android:id="@+id/editText" />
+
+    <Button
+        android:text="@string/login"
+        android:layout_marginTop="16dp"
+        android:background="@color/yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:id="@+id/button" />
+</LinearLayout>
