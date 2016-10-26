@@ -1,6 +1,8 @@
 package io.agora.ag_faceu.model;
 
 import android.content.Context;
+
+import io.agora.rtc.Constants;
 import io.agora.rtc.IRtcEngineEventHandler;
 import io.agora.rtc.RtcEngine;
 import org.slf4j.Logger;
@@ -119,6 +121,10 @@ public class MyEngineEventHandler {
         @Override
         public void onError(int error) {
             log.debug("onError " + error);
+
+            if (error == Constants.ERR_INVALID_VIEW || error == Constants.ERR_INIT_VIDEO) {
+                return;
+            }
 
             Iterator<AGEventHandler> it = mEventHandlerList.keySet().iterator();
             while (it.hasNext()) {
