@@ -15,9 +15,9 @@ import Foundation
 class Configuration: NSObject {
     
 
-    var appid = "c433c6a1d9b14167b3c249145db4d784"
-    var certificate = ""
-    
+    var appid = "82e27d05f57a4673818306c37cfcb447"
+    var certificate = "" // 79780a0d05a540a999ed9081b717779e
+
     var myPhoneNumber:String? {
         
         get {

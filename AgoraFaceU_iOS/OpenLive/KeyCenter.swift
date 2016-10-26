@@ -6,4 +6,4 @@
 //  Copyright © 2016 Agora. All rights reserved.
 //
 
-let VendorKey = "d5de287e48c5456ab3ba1ed7e677f3e3"
+let VendorKey = "a1dae94801a242a88352629410be8790"
