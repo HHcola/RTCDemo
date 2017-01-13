@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07BADFE31DBF5BBD00B48631 /* AgoraRtcEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BADFE21DBF5BBD00B48631 /* AgoraRtcEngineKit.framework */; };
 		07D24CF81D866704002C69BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D24CF71D866704002C69BF /* main.m */; };
 		07D24CFB1D866704002C69BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D24CFA1D866704002C69BF /* AppDelegate.m */; };
 		07D24D011D866704002C69BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D24CFF1D866704002C69BF /* Main.storyboard */; };
@@ -21,16 +20,17 @@
 		07D24D1F1D866802002C69BF /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D24D1E1D866802002C69BF /* CoreMedia.framework */; };
 		07D24D211D866809002C69BF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D24D201D866809002C69BF /* CoreTelephony.framework */; };
 		07D24D301D867644002C69BF /* KeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D24D231D867644002C69BF /* KeyCenter.m */; };
-		07D24D311D867644002C69BF /* LiveRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D24D251D867644002C69BF /* LiveRoomViewController.m */; };
 		07D24D321D867644002C69BF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D24D271D867644002C69BF /* MainViewController.m */; };
 		07D24D331D867644002C69BF /* ProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D24D291D867644002C69BF /* ProfileCell.m */; };
 		07D24D341D867644002C69BF /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D24D2B1D867644002C69BF /* SettingsViewController.m */; };
 		07DA27481DB6132E002FB0BA /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DA27471DB6132E002FB0BA /* MusicViewController.m */; };
 		07DA27531DB629F9002FB0BA /* binaural.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07DA27521DB629F9002FB0BA /* binaural.mp3 */; };
+		E950573E1DB7159500266CA0 /* LiveRoomViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E950573D1DB7159500266CA0 /* LiveRoomViewController.mm */; };
+		E95057451DB715EC00266CA0 /* CaptureSessionController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E95057441DB715EC00266CA0 /* CaptureSessionController.mm */; };
+		E9C421C41E16693A003464AD /* AgoraRtcEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C421C31E16693A003464AD /* AgoraRtcEngineKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		07BADFE21DBF5BBD00B48631 /* AgoraRtcEngineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraRtcEngineKit.framework; sourceTree = "<group>"; };
 		07D24CF31D866704002C69BF /* RTCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D24CF71D866704002C69BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		07D24CF91D866704002C69BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,7 +49,6 @@
 		07D24D221D867644002C69BF /* KeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyCenter.h; sourceTree = "<group>"; };
 		07D24D231D867644002C69BF /* KeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyCenter.m; sourceTree = "<group>"; };
 		07D24D241D867644002C69BF /* LiveRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveRoomViewController.h; sourceTree = "<group>"; };
-		07D24D251D867644002C69BF /* LiveRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveRoomViewController.m; sourceTree = "<group>"; };
 		07D24D261D867644002C69BF /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		07D24D271D867644002C69BF /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		07D24D281D867644002C69BF /* ProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCell.h; sourceTree = "<group>"; };
@@ -59,6 +58,10 @@
 		07DA27461DB6132E002FB0BA /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
 		07DA27471DB6132E002FB0BA /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
 		07DA27521DB629F9002FB0BA /* binaural.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = binaural.mp3; sourceTree = "<group>"; };
+		E950573D1DB7159500266CA0 /* LiveRoomViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LiveRoomViewController.mm; sourceTree = "<group>"; };
+		E95057431DB715EC00266CA0 /* CaptureSessionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureSessionController.h; sourceTree = "<group>"; };
+		E95057441DB715EC00266CA0 /* CaptureSessionController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CaptureSessionController.mm; sourceTree = "<group>"; };
+		E9C421C31E16693A003464AD /* AgoraRtcEngineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraRtcEngineKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07BADFE31DBF5BBD00B48631 /* AgoraRtcEngineKit.framework in Frameworks */,
+				E9C421C41E16693A003464AD /* AgoraRtcEngineKit.framework in Frameworks */,
 				07D24D211D866809002C69BF /* CoreTelephony.framework in Frameworks */,
 				07D24D1F1D866802002C69BF /* CoreMedia.framework in Frameworks */,
 				07D24D1D1D8667FB002C69BF /* CoreMotion.framework in Frameworks */,
@@ -105,15 +108,16 @@
 				07D24D271D867644002C69BF /* MainViewController.m */,
 				07D24D2A1D867644002C69BF /* SettingsViewController.h */,
 				07D24D2B1D867644002C69BF /* SettingsViewController.m */,
+				E95057431DB715EC00266CA0 /* CaptureSessionController.h */,
+				E95057441DB715EC00266CA0 /* CaptureSessionController.mm */,
 				07D24D241D867644002C69BF /* LiveRoomViewController.h */,
-				07D24D251D867644002C69BF /* LiveRoomViewController.m */,
+				E950573D1DB7159500266CA0 /* LiveRoomViewController.mm */,
 				07DA27461DB6132E002FB0BA /* MusicViewController.h */,
 				07DA27471DB6132E002FB0BA /* MusicViewController.m */,
 				07D24D221D867644002C69BF /* KeyCenter.h */,
 				07D24D231D867644002C69BF /* KeyCenter.m */,
 				07D24D281D867644002C69BF /* ProfileCell.h */,
 				07D24D291D867644002C69BF /* ProfileCell.m */,
-				07BADFE21DBF5BBD00B48631 /* AgoraRtcEngineKit.framework */,
 				07D24CF61D866704002C69BF /* Supporting Files */,
 			);
 			path = RTCDemo;
@@ -136,6 +140,7 @@
 		07D24D131D8667DC002C69BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E9C421C31E16693A003464AD /* AgoraRtcEngineKit.framework */,
 				07D24D201D866809002C69BF /* CoreTelephony.framework */,
 				07D24D1E1D866802002C69BF /* CoreMedia.framework */,
 				07D24D1C1D8667FB002C69BF /* CoreMotion.framework */,
@@ -173,7 +178,7 @@
 		07D24CEB1D866704002C69BF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Agora;
 				TargetAttributes = {
 					07D24CF21D866704002C69BF = {
@@ -226,11 +231,12 @@
 			files = (
 				07D24CFB1D866704002C69BF /* AppDelegate.m in Sources */,
 				07D24D331D867644002C69BF /* ProfileCell.m in Sources */,
+				E95057451DB715EC00266CA0 /* CaptureSessionController.mm in Sources */,
+				E950573E1DB7159500266CA0 /* LiveRoomViewController.mm in Sources */,
 				07D24CF81D866704002C69BF /* main.m in Sources */,
 				07D24D301D867644002C69BF /* KeyCenter.m in Sources */,
 				07D24D321D867644002C69BF /* MainViewController.m in Sources */,
 				07DA27481DB6132E002FB0BA /* MusicViewController.m in Sources */,
-				07D24D311D867644002C69BF /* LiveRoomViewController.m in Sources */,
 				07D24D341D867644002C69BF /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +281,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -324,7 +329,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -353,20 +357,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yuhua Gong (TH5SJ72C94)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yuhua Gong (TH5SJ72C94)";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/RTCDemo/libs",
 					"$(PROJECT_DIR)/RTCDemo",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = RTCDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.agora.RTCAudioDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = io.agora.RTCDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "a8f23d4f-f148-4a46-8d47-0975c3c35e8e";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -376,20 +382,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Agora Lab, Inc. (48TB6ZZL5S)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Agora Lab, Inc. (48TB6ZZL5S)";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/RTCDemo/libs",
 					"$(PROJECT_DIR)/RTCDemo",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = RTCDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.agora.RTCAudioDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = io.agora.RTCDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "e2c40d34-a180-447e-8c83-9be2f3c55c87";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

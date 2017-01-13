@@ -48,24 +48,24 @@
 
 - (IBAction)doReplaceSwitched:(UISwitch *)sender {
     BOOL shouldReplace = sender.on;
-    
+    //[self.rtcEngine audioMixingShouldReplace:shouldReplace];
     self.shouldReplace = shouldReplace;
 }
 
 - (IBAction)doPlayPausePressed:(UIButton *)sender {
     switch (self.mixingStatus) {
         case MusicMixingStatusStopped: {
-            
+            [self.rtcEngine startAudioMixing:self.localMusicFilePath loopback:NO replace:NO cycle:1];
             self.mixingStatus = MusicMixingStatusMixing;
             break;
         }
         case MusicMixingStatusMixing: {
-            
+            [self.rtcEngine pauseAudioMixing];
             self.mixingStatus = MusicMixingStatusPaused;
             break;
         }
         case MusicMixingStatusPaused: {
-            
+            [self.rtcEngine resumeAudioMixing];
             self.mixingStatus = MusicMixingStatusMixing;
             break;
         }
@@ -73,12 +73,12 @@
 }
 
 - (IBAction)doStopPressed:(UIButton *)sender {
-    
+    [self.rtcEngine stopAudioMixing];
     self.mixingStatus = MusicMixingStatusStopped;
 }
 
 - (IBAction)doVolumeSliderChanged:(UISlider *)sender {
-    
+    [self.rtcEngine adjustAudioMixingVolume:((NSUInteger)sender.value)];
 }
 
 - (void)updateViewWithMixingStatus:(MusicMixingStatus)status {

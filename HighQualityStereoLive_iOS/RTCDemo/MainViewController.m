@@ -6,6 +6,7 @@
 //  Copyright © 2016年 Agora. All rights reserved.
 //
 
+#import <AVFoundation/AVFoundation.h>
 #import "MainViewController.h"
 #import "SettingsViewController.h"
 #import "LiveRoomViewController.h"
@@ -13,6 +14,8 @@
 @interface MainViewController () <SettingsVCDelegate, LiveRoomVCDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *roomNameTextField;
 @property (weak, nonatomic) IBOutlet UIView *popoverSourceView;
+
+@property (weak, nonatomic) IBOutlet UILabel *captureDeviceName;
 
 @property (assign, nonatomic) AgoraRtcVideoProfile videoProfile;
 @end
@@ -22,6 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.videoProfile = AgoraRtc_VideoProfile_480P;
+    AVCaptureDevice *audioDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeAudio];
+    [_captureDeviceName setText:audioDevice.localizedName];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
